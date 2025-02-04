@@ -16,7 +16,6 @@ func die():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("ready")
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,7 +32,6 @@ func _process(delta: float) -> void:
 			$AnimatedSprite2D.flip_h = velocity.x < 0
 
 func _on_area_entered(area):
-	print("hello")
 	if area.is_in_group("coins"):
 		area.pickup()
 		pickup.emit()
